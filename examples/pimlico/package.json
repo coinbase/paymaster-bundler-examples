@@ -1,11 +1,14 @@
 {
-  "name": "permissionless.js",
+  "name": "pimlico",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
     "permissionless": "^0.0.36",
     "viem": "^2.7.13"
+  },
+  "scripts": {
+    "dev": "node src/mint.js"
   },
   "type": "module"
 }

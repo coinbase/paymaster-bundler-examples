@@ -1,7 +1,7 @@
 import { encodeFunctionData, http } from 'viem'
 import { sepolia } from 'viem/chains'
 import { createSmartAccountClient } from 'permissionless'
-import { createPimlicoPaymasterClient } from "permissionless/clients/pimlico.js";
+import { createPimlicoPaymasterClient } from "permissionless/clients/pimlico";
 import { simpleAccount } from './account.js';
 import { abi } from './abi.js';
 import config from '../config.json' with { type: 'json' };
@@ -34,11 +34,6 @@ const callData = encodeFunctionData({
     args: [smartAccountClient.account.address, 0],
 });
 
-let ms = 0;
-let timer = setInterval(() => {
-    ms++;
-}, 1);
-
 console.log("Waiting for transaction...")
 
 // Send the sponsored transaction!
@@ -48,7 +43,6 @@ const txHash = await smartAccountClient.sendTransaction({
     data: callData,
     value: BigInt(0),
 });
-clearInterval(timer);
 
-console.log("\x1b[32m", `✨ Done in ${(ms / 1000).toFixed(2)}s.`);
+console.log("\x1b[32m", `⛽ Successfully sponsored gas for ${config.function_name} transaction with Coinbase Cloud!`);
 console.log("\x1b[36m", `🔍 View on Etherscan: https://sepolia.basescan.org/tx/${txHash}`);
