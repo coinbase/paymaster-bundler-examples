@@ -1,0 +1,17 @@
+{
+  "name": "alchemy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@alchemy/aa-accounts": "^3.1.1",
+    "@alchemy/aa-core": "^3.1.1",
+    "axios": "^1.6.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "dev": "node src/mint.js"
+  },
+  "type": "module"
+}
