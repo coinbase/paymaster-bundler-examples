@@ -7,7 +7,6 @@ import { account } from "./account.js"
 import { extractHashFromError, transport } from "./utils.js"
 import config from '../config.json' with { type: 'json' };
 
-
 // Create the smart account for the user
 const smartAccountClient = createSmartAccountClient({
     transport: transport,
@@ -42,17 +41,14 @@ const callData = encodeFunctionData({
     args: [smartAccountClient.account.address, 0],
 });
 const contractAddress = config.contract_address;
-
 console.log("Waiting for transaction...")
 
 // Send the sponsored transaction!
 const uo = await smartAccountClient.sendUserOperation({
     uo: { target: contractAddress, data: callData, value: BigInt(0) },
 });
-
 try {
     await smartAccountClient.waitForUserOperationTransaction(uo);
-
 } catch (error) {
     // There's currently an issue with viem not being able to find the transaction hash, but it does exist
     const txHash = extractHashFromError(error.toString())
