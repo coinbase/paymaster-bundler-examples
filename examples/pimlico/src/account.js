@@ -1,7 +1,7 @@
 
 import { privateKeyToSimpleSmartAccount } from "permissionless/accounts"
 import { http, createPublicClient } from 'viem'
-import config from '../config.json' with { type: 'json' };
+import config from '../../../config.json' with { type: 'json' };
 
 const publicClient = createPublicClient({
     transport: http(config.rpc_url),

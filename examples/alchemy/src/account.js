@@ -2,7 +2,7 @@ import { createLightAccount } from "@alchemy/aa-accounts";
 import { LocalAccountSigner } from "@alchemy/aa-core";
 import { baseSepolia } from 'viem/chains';
 import { transport } from "./utils.js";
-import config from '../config.json' with { type: 'json' };
+import config from '../../../config.json' with { type: 'json' };
 
 // Create the signer
 // To customize the signer, see https://accountkit.alchemy.com/signers/choosing-a-signer.html

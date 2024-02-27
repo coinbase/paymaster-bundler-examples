@@ -5,7 +5,7 @@ import { sponsorUserOperation, updateUserOpGasFields } from "./paymaster.js";
 import { abi } from "./abi.js";
 import { account } from "./account.js"
 import { extractHashFromError, transport } from "./utils.js"
-import config from '../config.json' with { type: 'json' };
+import config from '../../../config.json' with { type: 'json' };
 
 // Create the smart account for the user
 const smartAccountClient = createSmartAccountClient({

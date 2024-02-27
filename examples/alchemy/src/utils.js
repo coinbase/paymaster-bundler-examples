@@ -1,5 +1,5 @@
 import { http } from "viem";
-import config from '../config.json' with { type: 'json' };
+import config from '../../../config.json' with { type: 'json' };
 
 export const extractHashFromError = (errorString) => {
     const regex = /Transaction with hash "([^"]+)"/;

@@ -1,10 +1,10 @@
 import { encodeFunctionData, http } from 'viem'
-import { sepolia } from 'viem/chains'
+import { baseSepolia } from 'viem/chains'
 import { createSmartAccountClient } from 'permissionless'
 import { createPimlicoPaymasterClient } from "permissionless/clients/pimlico";
 import { simpleAccount } from './account.js';
 import { abi } from './abi.js';
-import config from '../config.json' with { type: 'json' };
+import config from '../../../config.json' with { type: 'json' };
 
 // Get yours at https://www.coinbase.com/cloud/products/base/rpc
 const rpcUrl = config.rpc_url
@@ -14,14 +14,14 @@ console.log("\x1b[33m%s\x1b[0m", `Minting to ${simpleAccount.address}`);
 
 // Create the Cloud Paymaster
 const cloudPaymaster = createPimlicoPaymasterClient({
-    chain: sepolia,
+    chain: baseSepolia,
     transport: http(rpcUrl)
 })
 
 // Create the smart account for the user
 const smartAccountClient = createSmartAccountClient({
     account: simpleAccount,
-    chain: sepolia,
+    chain: baseSepolia,
     transport: http(rpcUrl),
     // IMPORTANT: Set up the Cloud Paymaster to sponsor your transaction
     sponsorUserOperation: cloudPaymaster.sponsorUserOperation,
