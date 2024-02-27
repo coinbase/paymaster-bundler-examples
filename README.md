@@ -21,7 +21,7 @@ git clone https://github.com/coinbase/paymaster-bundler-examples.git
 - Copy your RPC endpoint, and paste it into `config.json` as the `rpc_url` variable.
 
 ### 3. Create a private key
-You'll need to add a private key to sign for your ERC4337 smart account.
+You'll need to add a private key to initialize and sign for your [ERC-4337](https://www.erc4337.io/) smart contract account.
 - Since the NFT mint is free and gas will be sponsored by our Paymaster, you can use a new account without any funds.
 - To create a new private key with [Foundry](https://book.getfoundry.sh/reference/cast/cast-wallet-new), run `cast wallet new`
 - Copy your private key, and paste it into `config.json` as the `private_key` variable
