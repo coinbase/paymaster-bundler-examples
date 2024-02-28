@@ -14,35 +14,37 @@ We currently have examples for the following SDKs, but contributions are always 
 git clone https://github.com/coinbase/paymaster-bundler-examples.git
 ```
 
-### 2. Create your Coinbase Cloud Base Node RPC URL
-- Navigate to https://coinbase.com/cloud/products/base/rpc
-- Create a project, and select **Base Sepolia**
-- Click "**Activate**" on the Paymaster & Bundler modal
-- Copy your RPC endpoint, and paste it into `config.json` as the `rpc_url` variable.
+### 2. Set up environment variables
+- ### Create your Base Node RPC URL
+    - Navigate to https://coinbase.com/cloud/products/base/rpc
+    - Sign up for a Coinbase Cloud account, if you don't have one already
+    - Create a project, and select **Base Sepolia**
+    - Click "**Activate**" on the Paymaster & Bundler modal
+    - Copy your RPC endpoint, and paste it into `config.json` as the `rpc_url` variable.
 
-### 3. Create a private key
-You'll need to add a private key to initialize and sign for your [ERC-4337](https://www.erc4337.io/) smart contract account.
-- Since the NFT mint is free and gas will be sponsored by our Paymaster, you can use a new account without any funds.
-- To create a new private key with [Foundry](https://book.getfoundry.sh/reference/cast/cast-wallet-new), run `cast wallet new`
-- Copy your private key, and paste it into `config.json` as the `private_key` variable
+- ### Add a signer
+    You'll need to add a private key to initialize and sign for your [ERC-4337](https://www.erc4337.io/) smart contract account.
+    - Since the NFT mint is free and gas will be sponsored by our Paymaster, you can use a new account without any funds.
+    - To create a new private key with [Foundry](https://book.getfoundry.sh/reference/cast/cast-wallet-new), run `cast wallet new`
+    - Copy your private key, and paste it into `config.json` as the `private_key` variable
 
-### 2. Navigate to the directory of the SDK you want to run the example with.
+### 3. Navigate to the directory of the SDK you want to run the example with.
 Example for Alchemy
 ```
 cd examples/alchemy
 ```
 
-### 3. Install the dependencies with yarn
+### 4. Install the dependencies with yarn
 ```
 yarn
 ```
 
-### 4. Run the example
+### 5. Run the example
 ```
 yarn dev
 ```
 
-### 5. See your sponsored transaction live!
+### 6. See your sponsored transaction live!
 You should receive an Etherscan link with your sponsored transaction in the terminal output. [Example](https://sepolia.basescan.org/tx/0xe51e9bf6fea0dfecfcbf7168bcc7da2c833ad0dcac5651940953a89857674885)
 
 ```
