@@ -1,7 +1,7 @@
 
 import { deepHexlify, resolveProperties } from "@alchemy/aa-core";
 import axios from "axios";
-import config from '../../../config.json' with { type: 'json' };
+import config from '../../../config.json' assert { type: 'json' };
 
 const paymasterRequest = (userOp, opts) => {
     return {

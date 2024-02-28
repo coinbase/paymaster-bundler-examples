@@ -4,7 +4,7 @@ import { createSmartAccountClient } from 'permissionless'
 import { createPimlicoPaymasterClient } from "permissionless/clients/pimlico";
 import { simpleAccount } from './account.js';
 import { abi } from './abi.js';
-import config from '../../../config.json' with { type: 'json' };
+import config from '../../../config.json' assert { type: 'json' };
 
 // Get yours at https://www.coinbase.com/cloud/products/base/rpc
 const rpcUrl = config.rpc_url
