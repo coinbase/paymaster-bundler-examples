@@ -30,8 +30,9 @@ git clone https://github.com/coinbase/paymaster-bundler-examples.git
 - ### Add a signer
   You'll need to add a private key to initialize and sign for your [ERC-4337](https://www.erc4337.io/) smart contract account.
   - Since the NFT mint is free and gas will be sponsored by our Paymaster, you can use a new account without any funds.
-  - To create a new private key with [Foundry](https://book.getfoundry.sh/reference/cast/cast-wallet-new), run `cast wallet new`
+  - You can create a new private key with [Foundry](https://book.getfoundry.sh/reference/cast/cast-wallet-new)
     - To install Foundry, run `curl -L https://foundry.paradigm.xyz | bash`
+    - To genereate a keypair, run `cast wallet new`
   - Copy your private key, and paste it into `config.json` as the `private_key` variable
 
 ### 3. Navigate to the directory of the SDK you want to run the example with.
