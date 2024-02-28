@@ -9,6 +9,8 @@ We currently have examples for the following SDKs, but contributions are always 
 
 ## Getting Started
 
+Prerequisites: you'll need to have [node](https://nodejs.org/en) and [yarn](https://yarnpkg.com/) installed.
+
 ### 1. Clone this repo locally
 ```
 git clone https://github.com/coinbase/paymaster-bundler-examples.git
