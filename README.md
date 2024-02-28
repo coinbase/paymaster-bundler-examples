@@ -32,7 +32,7 @@ git clone https://github.com/coinbase/paymaster-bundler-examples.git
   - Since the NFT mint is free and gas will be sponsored by our Paymaster, you can use a new account without any funds.
   - You can create a new private key with [Foundry](https://book.getfoundry.sh/reference/cast/cast-wallet-new)
     - To install Foundry, run `curl -L https://foundry.paradigm.xyz | bash`
-    - To genereate a keypair, run `cast wallet new`
+    - To generate a new key pair, run `cast wallet new`
   - Copy your private key, and paste it into `config.json` as the `private_key` variable
 
 ### 3. Navigate to the directory of the SDK you want to run the example with.
