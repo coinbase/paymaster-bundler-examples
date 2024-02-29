@@ -2,7 +2,7 @@ import { encodeFunctionData, http } from 'viem'
 import { baseSepolia } from 'viem/chains'
 import { createSmartAccountClient } from 'permissionless'
 import { createPimlicoPaymasterClient } from "permissionless/clients/pimlico";
-import { simpleAccount } from './account.js';
+import { getAccount } from './account.js';
 import { abi } from './abi.js';
 import config from '../../../config.json' assert { type: 'json' };
 
@@ -10,17 +10,21 @@ import config from '../../../config.json' assert { type: 'json' };
 const rpcUrl = config.rpc_url
 const contractAddress = config.contract_address;
 
-console.log("\x1b[33m%s\x1b[0m", `Minting to ${simpleAccount.address}`);
-
 // Create the Cloud Paymaster
 const cloudPaymaster = createPimlicoPaymasterClient({
     chain: baseSepolia,
     transport: http(rpcUrl)
 })
 
+// Get the account
+const account = await getAccount(config.account_type).catch((error) => {
+    console.error("\x1b[31m", `❌ ${error.message}`);
+    process.exit(1);
+});
+
 // Create the smart account for the user
 const smartAccountClient = createSmartAccountClient({
-    account: simpleAccount,
+    account,
     chain: baseSepolia,
     transport: http(rpcUrl),
     // IMPORTANT: Set up the Cloud Paymaster to sponsor your transaction
@@ -33,7 +37,7 @@ const callData = encodeFunctionData({
     functionName: config.function_name,
     args: [smartAccountClient.account.address, 0],
 });
-
+console.log("\x1b[33m%s\x1b[0m", `Minting to ${account.address} (Account type: ${config.account_type})`);
 console.log("Waiting for transaction...")
 
 // Send the sponsored transaction!
