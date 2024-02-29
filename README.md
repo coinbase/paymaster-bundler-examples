@@ -4,8 +4,16 @@ This repo has code examples on how to sponsor a mint for a [Knight Warriors](htt
 
 We currently have examples for the following SDKs, but contributions are always welcome! See [Contributing](https://github.com/coinbase/paymaster-bundler-examples/blob/master/CONTRIBUTING.md) for more details.
 
+### Supported SDKs
+
 - [Alchemy (aa-core)](https://github.com/coinbase/paymaster-bundler-examples/tree/master/examples/alchemy)
 - [Pimlico (permissionless.js)](https://github.com/coinbase/paymaster-bundler-examples/tree/master/examples/pimlico)
+
+### Supported Account Types
+
+- [SimpleAccount](https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/samples/SimpleAccount.sol) (default)
+- [Safe](https://safe.global/)
+- [Kernel](https://github.com/zerodevapp/kernel)
 
 ## Getting Started
 
@@ -28,12 +36,24 @@ git clone https://github.com/coinbase/paymaster-bundler-examples.git
   - Copy your RPC endpoint, and paste it into `config.json` as the `rpc_url` variable.
 
 - ### Add a signer
+
   You'll need to add a private key to initialize and sign for your [ERC-4337](https://www.erc4337.io/) smart contract account.
+
   - Since the NFT mint is free and gas will be sponsored by our Paymaster, you can use a new account without any funds.
   - You can create a new private key with [Foundry](https://book.getfoundry.sh/reference/cast/cast-wallet-new)
     - To install Foundry, run `curl -L https://foundry.paradigm.xyz | bash`
     - To generate a new key pair, run `cast wallet new`
   - Copy your private key, and paste it into `config.json` as the `private_key` variable
+
+- ### Optional: configure the smart account
+
+  - You can use a different smart account type by changing the `account_type` variable in `config.json`.
+    - Valid values: `simple`, `safe`, `kernel`
+  - Compatibility
+    | SDK | Simple | Safe | Kernel
+    | --- | --- | -- | --
+    | aa-core | ✅ | ❌ | ❌
+    | permissionless.js | ✅ | ✅ | ✅
 
 ### 3. Navigate to the directory of the SDK you want to run the example with.
 
@@ -68,4 +88,5 @@ Waiting for transaction...
 ```
 
 ### 7. Play around with our demo app
+
 If you'd like to see an example of an app sponsoring NFT mints in action, check out our demo app [here](https://buildonchainapps.xyz/paymaster-bundler).
