@@ -1,6 +1,6 @@
 # [Coinbase Cloud Paymaster & Bundler Examples](https://github.com/coinbase/paymaster-bundler-examples)
 
-This repo has code examples on how to sponsor a mint for a [Knight Warriors](https://sepolia.basescan.org/token/0x66519fcaee1ed65bc9e0acc25ccd900668d3ed49) NFT on Base Sepolia using Coinbase Cloud's Paymaster & Bundler.
+This repo has code examples on how to sponsor a mint for a [Knight Warriors](https://sepolia.basescan.org/token/0x66519fcaee1ed65bc9e0acc25ccd900668d3ed49) NFT on Base Sepolia using Coinbase Cloud's Paymaster & Bundler. If you'd like to see a specific demo app sponsoring NFT mints in action, check ours out [here](https://buildonchainapps.xyz/paymaster-bundler).
 
 We currently have examples for the following SDKs, but contributions are always welcome! See [Contributing](https://github.com/coinbase/paymaster-bundler-examples/blob/master/CONTRIBUTING.md) for more details.
 
