@@ -66,3 +66,6 @@ Waiting for transaction...
  🔍 View on Etherscan: https://sepolia.basescan.org/tx/0xe51e9bf6fea0dfecfcbf7168bcc7da2c833ad0dcac5651940953a89857674885
 ✨  Done in 5.66s.
 ```
+
+### 7. Play around with our demo app
+If you'd like to see an example of an app sponsoring NFT mints in action, check out our demo app [here](https://buildonchainapps.xyz/paymaster-bundler).
