@@ -32,7 +32,7 @@ const smartAccountClient = createSmartAccountClient({
         dummyPaymasterAndData: () => "0x",
     },
 });
-console.log("\x1b[33m%s\x1b[0m", `Minting to ${smartAccountClient.account.address}`);
+console.log("\x1b[33m%s\x1b[0m", `Minting to ${smartAccountClient.account.address} (Account type: simple)`);
 
 // Encode the calldata
 const callData = encodeFunctionData({
