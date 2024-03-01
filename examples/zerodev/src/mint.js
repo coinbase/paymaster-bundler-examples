@@ -15,6 +15,7 @@ const kernelClient = createKernelAccountClient({
       console.log("Sponsoring user operation", userOperation)
       return cloudPaymaster.sponsorUserOperation({
         userOperation,
+        entryPoint: "0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789"
       })
     },
   })
@@ -23,7 +24,7 @@ console.log("\x1b[33m%s\x1b[0m", `Minting to ${account.address} (Account type: $
 console.log("Waiting for transaction...")
 
 // Send the sponsored transaction!
-txHash = await kernelClient.sendTransaction({
+const txHash = await kernelClient.sendTransaction({
   to: config.contract_address,
   value: BigInt(0),
   data: encodeFunctionData({
