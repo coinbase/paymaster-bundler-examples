@@ -12,10 +12,9 @@ const kernelClient = createKernelAccountClient({
     chain: baseSepolia,
     transport,
     sponsorUserOperation: async ({ userOperation }) => {
-      console.log("Sponsoring user operation", userOperation)
       return cloudPaymaster.sponsorUserOperation({
         userOperation,
-        entryPoint: config.entry_point,
+        entryPoint: config.entry_point
       })
     },
   })
