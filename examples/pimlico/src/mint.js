@@ -37,7 +37,7 @@ const callData = encodeFunctionData({
     functionName: config.function_name,
     args: [smartAccountClient.account.address, 0],
 });
-console.log("\x1b[33m%s\x1b[0m", `Minting to ${account.address} (Account type: ${config.account_type})`);
+console.log("\x1b[33m%s\x1b[0m", `Minting to ${account.address} (Account type: Kernel)`);
 console.log("Waiting for transaction...")
 
 // Send the sponsored transaction!
