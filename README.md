@@ -8,6 +8,7 @@ We currently have examples for the following SDKs, but contributions are always 
 
 - [Alchemy (aa-core)](https://github.com/coinbase/paymaster-bundler-examples/tree/master/examples/alchemy)
 - [Pimlico (permissionless.js)](https://github.com/coinbase/paymaster-bundler-examples/tree/master/examples/pimlico)
+- [ZeroDev (@zerodev/sdk)](https://github.com/coinbase/paymaster-bundler-examples/tree/master/examples/zerodev)
 
 ### Supported Account Types
 
@@ -54,6 +55,7 @@ git clone https://github.com/coinbase/paymaster-bundler-examples.git
     | --- | --- | -- | --
     | aa-core | ✅ | ❌ | ❌
     | permissionless.js | ✅ | ✅ | ✅
+    | @zerodev/sdk | ❌ | ❌ | ✅
 
 ### 3. Navigate to the directory of the SDK you want to run the example with.
 
