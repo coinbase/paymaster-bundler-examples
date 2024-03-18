@@ -2,7 +2,7 @@
 import { privateKeyToSimpleSmartAccount, signerToSafeSmartAccount, signerToEcdsaKernelSmartAccount } from "permissionless/accounts"
 import { privateKeyToAccount } from "viem/accounts"
 import { http, createPublicClient } from 'viem'
-import config from '../../../config.json' assert { type: 'json' };
+import config from '../../../config.js';
 
 const publicClient = createPublicClient({
     transport: http(config.rpc_url),

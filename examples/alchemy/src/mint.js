@@ -5,7 +5,7 @@ import { sponsorUserOperation, updateUserOpGasFields } from "./paymaster.js";
 import { abi } from "./abi.js";
 import { account } from "./account.js"
 import { extractHashFromError, transport } from "./utils.js"
-import config from '../../../config.json' assert { type: 'json' };
+import config from '../../../config.js';
 
 // Create the smart account for the user
 const smartAccountClient = createSmartAccountClient({
@@ -32,7 +32,7 @@ const smartAccountClient = createSmartAccountClient({
         dummyPaymasterAndData: () => "0x",
     },
 });
-console.log("\x1b[33m%s\x1b[0m", `Minting to ${smartAccountClient.account.address} (Account type: simple)`);
+console.log("\x1b[33m%s\x1b[0m", `Minting to ${smartAccountClient.account.address} (Account type: ${config.account_type})`);
 
 // Encode the calldata
 const callData = encodeFunctionData({
@@ -46,9 +46,11 @@ console.log("Waiting for transaction...")
 // Send the sponsored transaction!
 const uo = await smartAccountClient.sendUserOperation({
     uo: { target: contractAddress, data: callData, value: BigInt(0) },
+    //uo: { target: '0x0000000000000000000000000000000000000000', data: '0x', value: BigInt(0) },
 });
 try {
-    await smartAccountClient.waitForUserOperationTransaction(uo);
+    const tx = await smartAccountClient.waitForUserOperationTransaction(uo);
+    console.log(tx)
 } catch (error) {
     // There's currently an issue with viem not being able to find the transaction hash, but it does exist
     const txHash = extractHashFromError(error.toString())

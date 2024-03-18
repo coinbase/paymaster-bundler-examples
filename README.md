@@ -36,13 +36,27 @@ git clone https://github.com/coinbase/paymaster-bundler-examples.git
 
 ### 2. Set up environment variables
 
+- ### Copy the env example
+
+```
+cp .env.example .env
+```
+
+- ### Install dotenv
+
+```
+yarn
+```
+
+- This will setup dotenv to load the env file for private values
+
 - ### Create your Base Node RPC URL
 
   - Navigate to https://coinbase.com/cloud/products/base/rpc
   - Sign up for a Coinbase Cloud account, if you don't have one already
   - Create a project, and select **Base Sepolia**
   - Click "**Activate**" on the Paymaster & Bundler modal
-  - Copy your RPC endpoint, and paste it into `config.json` as the `rpc_url` variable.
+  - Copy your RPC endpoint, and paste it into `.env` as the `RPC_URL` variable.
 
 - ### Add a signer
 
@@ -52,11 +66,11 @@ git clone https://github.com/coinbase/paymaster-bundler-examples.git
   - You can create a new private key with [Foundry](https://book.getfoundry.sh/reference/cast/cast-wallet-new)
     - To install Foundry, run `curl -L https://foundry.paradigm.xyz | bash`
     - To generate a new key pair, run `cast wallet new`
-  - Copy your private key, and paste it into `config.json` as the `private_key` variable
+  - Copy your private key, and paste it into `.env` as the `PRIVATE_KEY` variable
 
 - ### Optional: configure the smart account for Pimlico
 
-  - If you're using Pimlico, you can use a different smart account type by changing the `account_type` variable in `config.json`
+  - If you're using Pimlico, you can use a different smart account type by changing the `account_type` variable in `.env`
     - Valid values: `simple`, `safe`, `kernel`
     - [pimlico/src/account.js](https://github.com/coinbase/paymaster-bundler-examples/blob/master/examples/pimlico/src/account.js) is a code example on how to configure a different smart account for SDKs that support this feature
 

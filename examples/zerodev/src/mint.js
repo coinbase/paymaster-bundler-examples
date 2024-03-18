@@ -4,7 +4,7 @@ import { account, transport } from "./account.js";
 import { encodeFunctionData } from "viem"
 import { abi } from "./abi.js"
 import { cloudPaymaster } from "./paymaster.js";
-import config from '../../../config.json' assert { type: 'json' }; 
+import config from '../../../config.js'; 
 
 // Construct a Kernel account client
 const kernelClient = createKernelAccountClient({

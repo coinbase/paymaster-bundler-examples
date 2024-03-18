@@ -2,7 +2,7 @@ import { createKernelAccount } from "@zerodev/sdk"
 import { signerToEcdsaValidator } from "@zerodev/ecdsa-validator"
 import { privateKeyToAccount } from "viem/accounts"
 import { http, createPublicClient } from 'viem'
-import config from '../../../config.json' assert { type: 'json' }; 
+import config from '../../../config.js'; 
 
 export const transport = http(config.rpc_url)
 
