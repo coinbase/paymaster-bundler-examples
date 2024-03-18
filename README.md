@@ -36,6 +36,20 @@ git clone https://github.com/coinbase/paymaster-bundler-examples.git
 
 ### 2. Set up environment variables
 
+- ### Copy the env example
+
+```
+cp .env.example .env
+```
+
+- ### Install dotenv
+
+```
+yarn
+```
+
+- This will setup dotenv to load the env file for private values
+
 - ### Create your Base Node RPC URL
 
   - Navigate to https://coinbase.com/cloud/products/base/rpc
