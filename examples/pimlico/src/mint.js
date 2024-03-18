@@ -4,7 +4,7 @@ import { createSmartAccountClient } from 'permissionless'
 import { createPimlicoPaymasterClient } from "permissionless/clients/pimlico";
 import { getAccount } from './account.js';
 import { abi } from './abi.js';
-import config from '../../../config.json' assert { type: 'json' };
+import config from '../../../config.js';
 
 // Get yours at https://www.coinbase.com/cloud/products/base/rpc
 const rpcUrl = config.rpc_url
@@ -37,7 +37,7 @@ const callData = encodeFunctionData({
     functionName: config.function_name,
     args: [smartAccountClient.account.address, 0],
 });
-console.log("\x1b[33m%s\x1b[0m", `Minting to ${account.address} (Account type: Kernel)`);
+console.log("\x1b[33m%s\x1b[0m", `Minting to ${account.address} (Account type: ${config.account_type})`);
 console.log("Waiting for transaction...")
 
 // Send the sponsored transaction!
