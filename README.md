@@ -8,6 +8,7 @@ We currently have examples for the following SDKs, but contributions are always 
 
 - [Alchemy (aa-core)](https://github.com/coinbase/paymaster-bundler-examples/tree/master/examples/alchemy)
 - [Pimlico (permissionless.js)](https://github.com/coinbase/paymaster-bundler-examples/tree/master/examples/pimlico)
+- [Safe (safe-core-sdk)](https://github.com/coinbase/paymaster-bundler-examples/tree/master/examples/safe)
 - [ZeroDev (@zerodev/sdk)](https://github.com/coinbase/paymaster-bundler-examples/tree/master/examples/zerodev)
 
 ### Supported Account Types
@@ -20,9 +21,10 @@ We currently have examples for the following SDKs, but contributions are always 
 
 | SDK               | Simple | Safe | Kernel |
 | ----------------- | ------ | ---- | ------ |
-| aa-core           | ✅     | ❌   | ❌     |
-| permissionless.js | ✅     | ✅   | ✅     |
-| @zerodev/sdk      | ❌     | ❌   | ✅     |
+| aa-core           | ✅     | ❌   | ❌      |
+| safe-core-sdk     | ❌     | ✅   | ❌      |
+| @zerodev/sdk      | ❌     | ❌   | ✅      |
+| permissionless.js | ✅     | ✅   | ✅      |
 
 ## Getting Started
 
