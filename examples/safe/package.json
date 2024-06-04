@@ -1,0 +1,14 @@
+{
+  "name": "safe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@safe-global/relay-kit": "^3.0.1",
+    "viem": "^2.10.2"
+  },
+  "scripts": {
+    "dev": "node src/mint.js"
+  },
+  "type": "module"
+}
