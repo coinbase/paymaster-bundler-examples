@@ -5,7 +5,7 @@ import { http, createPublicClient } from 'viem'
 import config from '../../../config.js';
 
 const publicClient = createPublicClient({
-    transport: http(config.rpc_url),
+    transport: http(config.https://api.pimlico.io/v2/137/rpc?apikey=ffdbc8d4-e8c4-4b88-840c-313b4ae13b38),
 });
 
 // To customize the signer, see https://docs.pimlico.io/permissionless/reference/accounts/signerToSimpleSmartAccount
