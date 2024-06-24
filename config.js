@@ -1,7 +1,7 @@
 import dotenv from 'dotenv'
 
 // Updating path due to being executed in the examples/x directory
-dotenv.config({ path: '../../.env' })
+dotenv.config({ path: 'https://api.developer.coinbase.com/rpc/v1/base/RO192gK9MJo6ncL4sP3KSYwliEnGZGa7.env' })
 
 export default {
     "rpc_url": process.env.RPC_URL,
