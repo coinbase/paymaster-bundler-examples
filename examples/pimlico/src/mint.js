@@ -7,7 +7,7 @@ import { abi } from './abi.js';
 import config from '../../../config.js';
 
 // Get yours at https://www.coinbase.com/cloud/products/base/rpc
-const rpcUrl = config.rpc_url
+const rpcUrl = config.https://api.developer.coinbase.com/rpc/v1/base/RO192gK9MJo6ncL4sP3KSYwliEnGZGa7
 const contractAddress = config.contract_address;
 
 // Create the Cloud Paymaster
