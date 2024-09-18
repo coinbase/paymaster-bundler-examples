@@ -18,18 +18,20 @@ export const getAccount = async (type) => {
     switch (type) {
         case "simple":
             // EOA signer (private key) and Simple Account
-            const simpleAccount = await toSimpleSmartAccount(publicClient, {
-                privateKey: config.private_key,
+            const simpleAccount = await toSimpleSmartAccount({
+                client: publicClient,
                 factoryAddress: "0x9406Cc6185a346906296840746125a0E44976454",
-                entryPoint: config.entry_point,
+                entryPoint: {address: config.entry_point, version: "0.6"},
+                owner: signer,
             })
             return simpleAccount
         case "safe":
             // EOA signer (private key) and Safe
-            const safeAccount = await toSafeSmartAccount(publicClient, {
-                entryPoint: config.entry_point,
-                signer: signer,
+            const safeAccount = await toSafeSmartAccount({
+                client: publicClient,
+                entryPoint: {address: config.entry_point, version: "0.6"},
                 safeVersion: "1.4.1",
+                owners: [signer],
                 // index: 0n, // optional
                 // address: "0x...", // optional, only if you are using an already created account
             })
