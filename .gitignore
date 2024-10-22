@@ -1,4 +1,4 @@
 examples/*/node_modules/
 examples/*/yarn-error.log
-
+node_modules/
 .env
