@@ -41,12 +41,6 @@ function App() {
                 Disconnect
               </p>
             </div>
-            {account.address && (
-              <p>
-                Please fund this account to have paymaster sponsor tx:{" "}
-                {account.address}
-              </p>
-            )}
           </>
         )}
       </div>
