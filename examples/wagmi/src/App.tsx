@@ -43,6 +43,13 @@ function App() {
             </div>
           </>
         )}
+
+        {account.address && (
+          <p style={{ fontSize: '0.9rem', color: '#666', marginTop: '1rem' }}>
+            * On base sepolia, you may need to increase your paymaster's policy
+            global limit to ensure that your transaction is sponsored.
+          </p>
+        )}
       </div>
     </main>
   );
