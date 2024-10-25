@@ -25,7 +25,7 @@ try {
         args: [account.address, 1],
       },
     ],
-    paymster: true,
+    paymaster: true,
   });
 
   const receipt = await bundlerClient.waitForUserOperationReceipt({
