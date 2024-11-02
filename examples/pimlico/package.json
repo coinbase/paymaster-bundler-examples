@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "permissionless": "^0.0.36",
-    "viem": "^2.7.13"
+    "permissionless": "^0.2.13",
+    "viem": "^2.20.0"
   },
   "scripts": {
     "dev": "node src/mint.js"
