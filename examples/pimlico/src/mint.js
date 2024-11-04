@@ -26,9 +26,7 @@ const account = await getAccount(config.account_type).catch((error) => {
 const smartAccountClient = createSmartAccountClient({
     account,
     chain: baseSepolia,
-    bundlerTransport: http(rpcUrl),
-    // IMPORTANT: Set up the Cloud Paymaster to sponsor your transaction
-    paymaster: cloudPaymaster
+    bundlerTransport: http('http://localhost:8000/coinbase.bundler.api.v1.BundlerService/HandleBaseSepolia'),
 });
 
 // Encode the calldata
@@ -46,6 +44,8 @@ const txHash = await smartAccountClient.sendTransaction({
     to: contractAddress,
     data: callData,
     value: BigInt(0),
+    maxFeePerGas: 3000000000n,
+    maxPriorityFeePerGas: 1000000000n,
 });
 
 console.log("\x1b[32m", `⛽ Successfully sponsored gas for ${config.function_name} transaction with Coinbase Developer Platform!`);
