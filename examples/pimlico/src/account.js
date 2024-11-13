@@ -21,7 +21,6 @@ export const getAccount = async (type) => {
             const simpleAccount = await toSimpleSmartAccount({
                 owner,
                 client,
-                factoryAddress: "0x9406Cc6185a346906296840746125a0E44976454",
                 entryPoint: {
                     address: config.entry_point,
                     version: config.entry_point_version,
