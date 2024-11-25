@@ -118,4 +118,4 @@ Waiting for transaction...
 
 ### 7. Play around with our demo app
 
-If you'd like to see an example of an app sponsoring NFT mints in action, check out our demo app [here](https://buildonchainapps.xyz/paymaster-bundler).
+If you'd like to see an example of an app sponsoring NFT mints in action, check out our demo app [here](https://paymaster-demo-app.vercel.app/).
