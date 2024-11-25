@@ -1,10 +1,8 @@
 # [Coinbase Developer Platform Paymaster & Bundler Examples](https://github.com/coinbase/paymaster-bundler-examples)
 
-## Looking for Frontend Examples?
+✨ Looking for frontend examples? Be sure to check out our **[Wagmi x Coinbase Smart Wallet](https://github.com/coinbase/paymaster-bundler-examples/tree/master/examples/wagmi)** example for inspiration and guidance! ✨
 
-Be sure to check out our **[Wagmi x Coinbase Smart Wallet](https://github.com/coinbase/paymaster-bundler-examples/tree/master/examples/wagmi)** example for inspiration and guidance!
-
-This repo has code examples on how to sponsor a mint for a [Knight Warriors](https://sepolia.basescan.org/token/0x66519fcaee1ed65bc9e0acc25ccd900668d3ed49) NFT on Base Sepolia using Coinbase Developer Platform's Paymaster & Bundler. If you'd like to see a live demo app sponsoring NFT mints in action, check out ours [here](https://buildonchainapps.xyz/paymaster-bundler).
+This repo has code examples on how to sponsor a mint for a [Knight Warriors](https://sepolia.basescan.org/token/0x66519fcaee1ed65bc9e0acc25ccd900668d3ed49) NFT on Base Sepolia using Coinbase Developer Platform's Paymaster & Bundler. If you'd like to see a live demo app sponsoring NFT mints in action, check out ours [here](https://paymaster-demo-app.vercel.app/).
 
 We currently have examples for the following SDKs, but contributions are always welcome! See [Contributing](https://github.com/coinbase/paymaster-bundler-examples/blob/master/CONTRIBUTING.md) for more details.
 
