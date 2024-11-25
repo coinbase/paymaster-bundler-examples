@@ -1,5 +1,9 @@
 # [Coinbase Developer Platform Paymaster & Bundler Examples](https://github.com/coinbase/paymaster-bundler-examples)
 
+## Looking for Frontend Examples?
+
+Be sure to check out our **[Wagmi x Coinbase Smart Wallet](https://github.com/coinbase/paymaster-bundler-examples/tree/master/examples/wagmi)** example for inspiration and guidance!
+
 This repo has code examples on how to sponsor a mint for a [Knight Warriors](https://sepolia.basescan.org/token/0x66519fcaee1ed65bc9e0acc25ccd900668d3ed49) NFT on Base Sepolia using Coinbase Developer Platform's Paymaster & Bundler. If you'd like to see a live demo app sponsoring NFT mints in action, check out ours [here](https://buildonchainapps.xyz/paymaster-bundler).
 
 We currently have examples for the following SDKs, but contributions are always welcome! See [Contributing](https://github.com/coinbase/paymaster-bundler-examples/blob/master/CONTRIBUTING.md) for more details.
@@ -9,20 +13,25 @@ We currently have examples for the following SDKs, but contributions are always 
 - [Alchemy (aa-core)](https://github.com/coinbase/paymaster-bundler-examples/tree/master/examples/alchemy)
 - [Pimlico (permissionless.js)](https://github.com/coinbase/paymaster-bundler-examples/tree/master/examples/pimlico)
 - [ZeroDev (@zerodev/sdk)](https://github.com/coinbase/paymaster-bundler-examples/tree/master/examples/zerodev)
+- [Wagmi (wevm/wagmi)](https://github.com/coinbase/paymaster-bundler-examples/tree/master/examples/wagmi)
+- [Viem](https://github.com/coinbase/paymaster-bundler-examples/tree/master/examples/viem)
 
 ### Supported Account Types
 
 - [SimpleAccount](https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/samples/SimpleAccount.sol) (default)
 - [Safe](https://safe.global/)
 - [Kernel](https://github.com/zerodevapp/kernel)
+- [Coinbase Smart Account](https://github.com/coinbase/smart-wallet)
 
 ### Compatibility
 
-| SDK               | Simple | Safe | Kernel |
-| ----------------- | ------ | ---- | ------ |
-| aa-core           | ✅     | ❌   | ❌     |
-| permissionless.js | ✅     | ✅   | ✅     |
-| @zerodev/sdk      | ❌     | ❌   | ✅     |
+| SDK               | Simple | Safe | Kernel | Coinbase |
+| ----------------- | ------ | ---- | ------ | -------- |
+| aa-core           | ✅     | ❌   | ❌     | ❌       |
+| permissionless.js | ✅     | ✅   | ✅     | ✅       |
+| @zerodev/sdk      | ❌     | ❌   | ✅     | ❌       |
+| wevm/wagmi        | ❌     | ✅   | ❌     | ✅       |
+| viem              | ✅     | ✅   | ✅     | ✅       |
 
 ## Getting Started
 
