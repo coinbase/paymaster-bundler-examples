@@ -3,10 +3,10 @@ import { toSimpleSmartAccount, toSafeSmartAccount, toEcdsaKernelSmartAccount } f
 import { privateKeyToAccount } from "viem/accounts"
 import { http, createPublicClient } from 'viem'
 import config from '../../../config.js';
-import { baseSepolia } from "viem/chains";
+import { base } from "viem/chains";
 
 const client = createPublicClient({
-    chain: baseSepolia,
+    chain: base,
     transport: http(config.rpc_url),
 });
 
