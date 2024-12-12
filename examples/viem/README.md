@@ -25,8 +25,8 @@ yarn dev
 You should receive an Etherscan link with your sponsored transaction in the terminal output. [Example](https://sepolia.basescan.org/tx/0xe51e9bf6fea0dfecfcbf7168bcc7da2c833ad0dcac5651940953a89857674885)
 
 ```
-✅ Transaction successfully sponsored!
-⛽ Successfully sponsored gas for mintTo transaction with Coinbase Developer Platform!
-🔍 View on Etherscan: https://sepolia.basescan.org/tx/0xe51e9bf6fea0dfecfcbf7168bcc7da2c833ad0dcac5651940953a89857674885
+ ✅ Transaction successfully sponsored!
+ ⛽ Successfully sponsored gas for mintTo transaction with Coinbase Developer Platform!
+ 🔍 View on Etherscan: https://sepolia.basescan.org/tx/0xe51e9bf6fea0dfecfcbf7168bcc7da2c833ad0dcac5651940953a89857674885
 ✨  Done in 5.66s.
 ```
