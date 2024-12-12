@@ -4,15 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@zerodev/ecdsa-validator": "^5.1.0",
-    "@zerodev/presets": "^5.1.4",
-    "@zerodev/sdk": "^5.1.7",
-    "permissionless": "^0.0.34",
-    "tslib": "^2.6.2",
-    "viem": "^2.7.16"
+    "@zerodev/ecdsa-validator": "^5.4.0",
+    "@zerodev/presets": "^5.3.3",
+    "@zerodev/sdk": "^5.4.3",
+    "permissionless": "^0.2.22",
+    "tslib": "^2.8.1",
+    "viem": "^2.21.54"
   },
   "scripts": {
-    "dev": "node src/mint.js"
+    "dev": "node src/index.js"
   },
   "type": "module"
 }
