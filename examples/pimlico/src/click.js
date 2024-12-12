@@ -1,5 +1,5 @@
 import { encodeFunctionData, http } from 'viem'
-import { base } from 'viem/chains'
+import { baseSepolia } from 'viem/chains'
 import { createSmartAccountClient } from 'permissionless'
 import { createPimlicoClient } from "permissionless/clients/pimlico";
 import { getAccount } from './account.js';
@@ -12,7 +12,7 @@ const contractAddress = config.contract_address;
 
 // Create the Cloud Paymaster
 const cloudPaymaster = createPimlicoClient({
-    chain: base,
+    chain: baseSepolia,
     transport: http(rpcUrl)
 })
 
@@ -25,18 +25,18 @@ const account = await getAccount(config.account_type).catch((error) => {
 // Create the smart account for the user
 const smartAccountClient = createSmartAccountClient({
     account,
-    chain: base,
+    chain: baseSepolia,
     bundlerTransport: http(rpcUrl),
     // IMPORTANT: Set up the Cloud Paymaster to sponsor your transaction
     paymaster: cloudPaymaster
 });
 
-// Encode the calldata
+// Encode the calldata. Calls the click function on the smart contract
 const callData = encodeFunctionData({
     abi: abi,
     functionName: config.function_name
 });
-console.log("\x1b[33m%s\x1b[0m", `Minting to ${account.address} (Account type: ${config.account_type})`);
+console.log("\x1b[33m%s\x1b[0m", `Calling click() on ${account.address} (Account type: ${config.account_type})`);
 console.log("Waiting for transaction...")
 
 // Send the sponsored transaction!
@@ -48,5 +48,5 @@ const txHash = await smartAccountClient.sendTransaction({
 });
 
 console.log("\x1b[32m", `⛽ Successfully sponsored gas for ${config.function_name} transaction with Coinbase Developer Platform!`);
-console.log("\x1b[36m", `🔍 View on Etherscan: https://basescan.org/tx/${txHash}`);
+console.log("\x1b[36m", `🔍 View on Etherscan: https://sepolia.basescan.org/tx/${txHash}`);
 process.exit(0)

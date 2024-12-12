@@ -8,7 +8,7 @@
     "viem": "^2.20.0"
   },
   "scripts": {
-    "dev": "node src/mint.js"
+    "dev": "node src/click.js"
   },
   "type": "module"
 }
