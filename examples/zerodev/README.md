@@ -1,8 +1,8 @@
 ## Getting Started
 
-This example uses [the ZeroDev SDK](https://docs.zerodev.app/) to create a [ERC-4337](https://www.erc4337.io/) smart contract account and send a sponsored transaction.
+This example uses [the ZeroDev SDK](https://docs.zerodev.app/) to create an [ERC-4337](https://www.erc4337.io/) smart contract account and send a sponsored transaction.
 
-We'll be minting a NFT on Base Sepolia using Coinbase Developer Platform's Paymaster & Bundler.
+We'll be minting an NFT on Base Sepolia using Coinbase Developer Platform's Paymaster & Bundler.
 
 ### 1. Setup
 
