@@ -68,7 +68,7 @@ PRIVATE_KEY='0xabcd1123........'
 Next time you need to send eth, usdc, or make any other contract call, you can do it completely gasless using
 
 ```
-node send.js
+node send.js --currency USDC --from <yourSafeWalletAddress> --to <yourDestination> --amount <amount>
 ```
 
 By default the code in send.js just does a simple eth transfer. You'll have to edit it to suit your needs.
