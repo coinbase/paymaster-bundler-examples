@@ -30,7 +30,7 @@ export const getAccount = async (type) => {
         case "safe":
             // EOA signer (private key) and Safe
             const safeAccount = await toSafeSmartAccount({
-                owner,
+                owners: [owner],
                 client,
                 entryPoint: {
                     address: config.entry_point,
