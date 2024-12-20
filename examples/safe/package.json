@@ -1,0 +1,12 @@
+{
+  "name": "safe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "permissionless": "^0.2.23",
+    "yargs": "^17.7.2"
+  }
+}
