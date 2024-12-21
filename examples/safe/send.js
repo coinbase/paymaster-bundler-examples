@@ -120,7 +120,7 @@ if (currency.toUpperCase() == 'USDC') {
         ]
     })
 
-    console.log(`✅ Eth sent: https://basescan.org/tx/${txHash}`)
+    console.log(`✅ USDC sent: https://basescan.org/tx/${txHash}`)
 }
 
 
