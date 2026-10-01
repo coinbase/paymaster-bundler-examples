@@ -1,0 +1,50 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*
+!alerts/.env.example
+!alerts/alerts.config.example.json
+
+# local alert runtime
+alerts/alerts.config.json
+alerts/node_modules/
+algo/algo.config.json
+algo/.algo-state.json
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+algo/trades.journal.jsonl
+
+algo/signals.calibrated.json
+
+algo/instagram.recipient.json
+algo/instagram.webhook.jsonl

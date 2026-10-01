@@ -1,0 +1,50 @@
+{
+  "name": "my-onchainkit-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "alert:ws": "npm --prefix alerts run ws",
+    "alert:price": "npm --prefix alerts run price",
+    "alert:email": "npm --prefix alerts run email",
+    "agent": "node agent/cli.mjs",
+    "trade:accounts": "node agent/cli.mjs balances",
+    "algo": "node algo/run.mjs",
+    "algo:once": "node algo/run.mjs",
+    "algo:alerts": "node algo/setup-alerts.mjs",
+    "algo:alerts-test": "node algo/setup-alerts.mjs --test",
+    "algo:alerts-chat": "node algo/setup-alerts.mjs --chat-from-updates",
+    "algo:calibrate": "node algo/calibrate.mjs --force",
+    "algo:instagram": "node algo/setup-instagram.mjs",
+    "algo:instagram-test": "node algo/setup-instagram.mjs --test"
+  },
+  "dependencies": {
+    "@coinbase/cdp-sdk": "^1.57.1",
+    "@coinbase/onchainkit": "latest",
+    "@tanstack/react-query": "^5",
+    "@types/uuid": "^10.0.0",
+    "dotenv": "^18.0.5",
+    "jose": "^6.2.12",
+    "jsonwebtoken": "^9.0.3",
+    "next": "^15.5.27",
+    "react": "^18",
+    "react-dom": "^18",
+    "uuid": "^14.0.2",
+    "viem": "^2.27.2",
+    "wagmi": "^2.14.11"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "15.3.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

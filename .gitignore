@@ -2,3 +2,12 @@
 examples/*/yarn-error.log
 node_modules/
 .env
+.env.local
+**/.env
+**/.env.local
+!**/.env.example
+!**/.env*.example
+**/*Copy.env*
+examples/**/.env
+# accidental nested clone/copy of this repo
+/paymaster-bundler-examples/

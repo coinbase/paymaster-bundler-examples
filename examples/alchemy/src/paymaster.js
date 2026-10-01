@@ -19,6 +19,10 @@ export const sponsorUserOperation = async (userOp, opts) => {
 
     const req = paymasterRequest(resolvedUserOp, opts)
     const res = await axios.post(config.rpc_url, req)
+    if (!res.data?.result) {
+        const err = res.data?.error
+        throw new Error(`Paymaster sponsorship failed: ${err?.message || JSON.stringify(res.data)}`)
+    }
     return res.data.result
 }
 

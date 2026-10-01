@@ -1,0 +1,18 @@
+{
+  "name": "free-alert-bridges",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "ws": "node coinbase-ws.js",
+    "price": "node price-alerts.js",
+    "email": "node email-bridge.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "imapflow": "^1.0.181",
+    "mailparser": "^3.7.2",
+    "my-onchainkit-app": "file:..",
+    "ws": "^8.18.1"
+  }
+}

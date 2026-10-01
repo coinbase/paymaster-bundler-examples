@@ -1,0 +1,42 @@
+{
+  "products": ["BTC-USD", "ETH-USD"],
+  "rules": [
+    {
+      "id": "btc-above",
+      "product": "BTC-USD",
+      "above": 150000,
+      "action": "sell",
+      "cooldownSec": 3600
+    },
+    {
+      "id": "btc-below",
+      "product": "BTC-USD",
+      "below": 50000,
+      "action": "buy",
+      "cooldownSec": 3600
+    },
+    {
+      "id": "btc-rsi-oversold",
+      "product": "BTC-USD",
+      "rsiBelow": 30,
+      "rsiPeriod": 14,
+      "candleGranularity": "ONE_HOUR",
+      "action": "buy",
+      "cooldownSec": 7200
+    },
+    {
+      "id": "eth-below",
+      "product": "ETH-USD",
+      "below": 1500,
+      "action": "buy",
+      "cooldownSec": 3600
+    },
+    {
+      "id": "eth-above",
+      "product": "ETH-USD",
+      "above": 5000,
+      "action": "sell",
+      "cooldownSec": 3600
+    }
+  ]
+}
